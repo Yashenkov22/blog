@@ -13,6 +13,8 @@ from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 #вывод всех опуликованных статей с пагинацией
 def post_list(request, tag_slug=None):
     post_list = Post.published.all()
+    x = 5
+    y = 22
     tag = None
     form = SearchForm()
     if tag_slug:
